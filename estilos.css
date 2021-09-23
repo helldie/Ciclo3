@@ -1,0 +1,418 @@
+a {
+  color: inherit;
+  text-decoration: none;
+}
+* {
+  text-decoration: none;
+  list-style: none;
+  margin: 0px;
+  padding: 0px;
+  outline: none;
+}
+
+
+/* grid*/
+.container {
+  display: grid; 
+  grid-template-columns: 0.7fr 1.25fr 1.25fr 1fr; 
+  grid-template-rows: 0.5r 1.2fr 0.9fr 1fr 1fr; 
+  gap: 0rem 0rem; 
+  grid-template-areas: 
+      "superior superior superior superior"
+      "landing_navbar centro_izq centro_der derecha"
+      "landing_navbar centro_izq centro_der derecha"
+      "landing_navbar centro_izq centro_der derecha"
+      "inferior inferior inferior inferior"; 
+    }
+    
+    .landing_navbar { grid-area: landing_navbar; }
+    .superior { grid-area: superior; }
+    .centro_izq { grid-area: centro_izq; }
+    .centro_der { grid-area: centro_der; }
+    .derecha { grid-area: derecha; }
+    .inferior { grid-area: inferior; }
+
+
+
+body {
+  margin: 0px;
+  padding: 0px;
+  font-family: "Open Sans", sans-serif;
+}
+section {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0px auto;
+  display: table;
+  position: relative;
+}
+h1 {
+  margin: 0px auto;
+  display: table;
+  font-size: 26px;
+  padding: 40px 0px;
+  color: #002e5b;
+  text-align: center;
+}
+h1 span {
+  font-weight: 500;
+}
+
+/*header*/
+header {
+  width: 100%;
+  display: table;
+  background-color: #70dafa;
+  margin-bottom: 50px;
+}
+#logo {
+  float: left;
+  font-size: 24px;
+  text-transform: uppercase;
+  color: #002e5b;
+  font-weight: 600;
+  padding: 20px 0px;
+}
+nav {
+  width: auto;
+  float: right;
+}
+nav ul {
+  display: table;
+  float: right;
+}
+nav ul li {
+  float: left;
+}
+nav ul li:last-child {
+  padding-right: 0px;
+}
+nav ul li a {
+  color: #002e5b;
+  font-size: 18px;
+  padding: 25px 20px;
+  display: inline-block;
+  transition: all 0.5s ease 0s;
+}
+nav ul li a:hover {
+  background-color: #014b94;
+  color: #fbfdfd;
+  transition: all 0.5s ease 0s;
+}
+nav ul li a:hover i {
+  color: #fbfdfd;
+  transition: all 0.5s ease 0s;
+}
+nav ul li a i {
+  padding-right: 10px;
+  color: #1c72c98f;
+  transition: all 0.5s ease 0s;
+}
+
+.toggle-menu ul {
+  display: table;
+  width: 25px;
+}
+.toggle-menu ul li {
+  width: 100%;
+  height: 3px;
+  background-color: #1c72c98f;
+  margin-bottom: 4px;
+}
+.toggle-menu ul li:last-child {
+  margin-bottom: 0px;
+}
+
+input[type="checkbox"],
+label {
+  display: none;
+}
+
+.content {
+  display: table;
+  margin-bottom: 60px;
+  width: 900px;
+}
+.content h2 {
+  font-size: 18px;
+  font-weight: 500;
+  color: #002e5b;
+  border-bottom: 1px solid #fde428;
+  display: table;
+  padding-bottom: 10px;
+  margin-bottom: 10px;
+}
+.content p {
+  font-size: 14px;
+  line-height: 22px;
+  color: #7c7c7c;
+  text-align: justify;
+}
+
+footer {
+  display: table;
+  padding-bottom: 30px;
+  width: 100%;
+}
+.social {
+  margin: 0px auto;
+  display: table;
+  display: table;
+}
+.social li {
+  float: left;
+  padding: 0px 10px;
+}
+.social li a {
+  color: #002e5b;
+  transition: all 0.5s ease 0s;
+}
+.social li a:hover {
+  color: #fde428;
+  transition: all 0.5s ease 0s;
+}
+.icon_general {
+  width: 1rem;
+  padding: 0 0.2rem;
+  color: white;
+}
+@media only screen and (max-width: 1440px) {
+  section {
+    max-width: 95%;
+  }
+}
+
+@media only screen and (max-width: 980px) {
+  header {
+    padding: 20px 0px;
+  }
+  #logo {
+    padding: 0px;
+  }
+  input[type="checkbox"] {
+    position: absolute;
+    top: -9999px;
+    left: -9999px;
+    background: none;
+  }
+  input[type="checkbox"]:fous {
+    background: none;
+  }
+  label {
+    float: right;
+    padding: 8px 0px;
+    display: inline-block;
+    cursor: pointer;
+  }
+  input[type="checkbox"]:checked ~ nav {
+    display: block;
+  }
+
+  nav {
+    display: none;
+    position: absolute;
+    right: 0px;
+    top: 53px;
+    background-color: #70dafa;
+    padding: 0px;
+    z-index: 99;
+  }
+  nav ul {
+    width: auto;
+  }
+  nav ul li {
+    float: none;
+    padding: 0px;
+    width: 100%;
+    display: table;
+  }
+  nav ul li a {
+    color: #002e5b;
+    font-size: 15px;
+    padding: 10px 20px;
+    display: block;
+    border-bottom: 1px solid rgba(225, 225, 225, 0.1);
+  }
+  nav ul li a i {
+    color: #fde428;
+    padding-right: 13px;
+  }
+}
+
+@media only screen and (max-width: 980px) {
+  .content {
+    width: 90%;
+  }
+}
+
+@media only screen and (max-width: 568px) {
+  h1 {
+    padding: 25px 0px;
+  }
+  h1 span {
+    display: block;
+  }
+}
+
+@media only screen and (max-width: 480px) {
+  section {
+    max-width: 90%;
+  }
+}
+
+@media only screen and (max-width: 360px) {
+  h1 {
+    font-size: 20px;
+  }
+  label {
+    padding: 5px 0px;
+  }
+  #logo {
+    font-size: 20px;
+  }
+  nav {
+    top: 47px;
+  }
+}
+
+@media only screen and (max-width: 320px) {
+  h1 {
+    padding: 20px 0px;
+  }
+}
+
+
+/*boton*/
+.btn_irRegistro {
+    font-size: 1rem; /* Cambiar el tamaño de la tipografia */
+    /*text-transform: uppercase; /* Texto en mayusculas */
+    font-weight: bold; /* Fuente en negrita o bold */
+    color: #f1f4f5; /* Color del texto */
+    border-radius: 0.3rem; /* Borde del boton */
+    letter-spacing: 0.1rem; /* Espacio entre letras */
+    background-color: #080f2e; /* Color de fondo */
+    padding: 0.8rem 0.8rem; /* Relleno del boton */
+    position:absolute;
+    bottom: 1rem;
+    left:3rem;
+    transition: all 300ms ease 0ms;
+    box-shadow: 0.3rem 0.5rem 0.9rem rgba(7, 17, 43, 0.836);
+    z-index: 99;
+    border-color: rgb(100, 116, 185);
+    border-style:ridge;
+    border: none;
+    
+    }
+
+    .btn_irRegistro:hover {
+      background-color: #014b94; /* Color de fondo al pasar el cursor */
+      box-shadow: 0.3rem 0.5rem 0.9rem rgb(12, 12, 121);
+      transform: translateY(0.5rem);
+      }
+
+p.landing_navbar{
+    position:absolute;
+    bottom: 4rem;
+    left:3rem;
+    color:#172a3d;
+    }
+  
+  /*HTML REGISTRO*/
+body{
+      font-family: arial;
+      }
+div.form h3{
+    margin: 0;
+    text-align: center;
+    height:2.5rem;
+    margin-bottom: 1.875rem;
+    border-bottom: 0.063rem solid;
+    font-size: 1.25rem;
+    }
+  
+.form{
+    width: 27.813rem;
+    height: 23.75rem;
+    background:#4e4d4d;
+    margin: auto;
+    margin-top: 6.25rem;
+    box-shadow: 0.438rem 0.813rem 2.313rem #000;
+    padding: 1.25rem;
+    border-top: 0.25rem solid #017bab;
+    color: white;
+    }
+.form form_registro_usuario{
+    width: 6.25rem; 
+    border: 0.063rem solid #017bab;
+    margin-bottom: 0.938rem;
+    padding: 0.688rem 0.6rem;
+    background: #252323;
+    font-size: 0.938rem;
+    font-weight: bold;
+    }
+
+.controls{
+    width: 23.75rem; 
+    border: 0.063rem solid #017bab;
+    margin-bottom: 0.938rem;
+    padding: 0.688rem 0.6rem;
+    background: #252323;
+    font-size: 0.938rem;
+    font-weight: bold;
+    }
+.btn_enviar_registro{
+    width: 23.75rem; 
+    height:2.5rem;
+    background: #017bad;
+    border: none;
+    color: white;
+    margin-bottom: 0.938rem;
+    }
+    
+.form a{
+    color: white;
+    text-decoration: none;
+    font-size: 0.938rem;
+    }
+
+.form p{
+    height: 2.5rem;
+    text-align: center;
+    border-bottom: 0.063rem solid;
+    }
+
+.form a:hover{
+    text-decoration: underline;
+    }
+
+div.centro_izq {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 4rem;
+    text-align: center;
+    }
+
+div.centro_der {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 4rem;
+    text-align: center;
+    }
+
+div.superior {
+  width: 100%;
+    }
+
+img.navbar_logo{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 3rem;
+    background-position: 50%;
+    border-radius: 50%;
+    background-size: 100% auto;
+    position: relative;
+    top: 10%;
+    }
